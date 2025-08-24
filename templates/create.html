@@ -2,20 +2,24 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>メモ作成</title>
+    <title>新しいメモを作成</title>
 </head>
 <body>
-    <h1>メモ作成</h1>
+    <h1>新しいメモを作成</h1>
     <form method="post">
         <label for="title">タイトル</label>
         <br>
-        <input type="text" name="title" required>
+        <input name="title" id="title" required>
+        <br>
         <br>
         <label for="content">内容</label>
         <br>
-        <textarea name="content"></textarea>
+        <textarea name="content" id="content" rows="5" cols="40"></textarea>
+        <br>
         <br>
         <button type="submit">保存</button>
     </form>
+    <hr>
+    <a href="{{ url_for('memo.index') }}">一覧に戻る</a>
 </body>
 </html>
